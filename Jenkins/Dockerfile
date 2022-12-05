@@ -1,4 +1,4 @@
-FROM centos
+FROM linux
 RUN yum update -y && \
     yum upgrade -y
 RUN wget -O /etc/yum.repos.d/jenkins.repo \
