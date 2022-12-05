@@ -12,3 +12,5 @@ RUN apt update -y && \
 RUN apt-get install openjdk-11-jdk -y
 RUN apt-get install jenkins -y
 RUN service jenkins start
+#keep docker container from exiting
+ENTRYPOINT ["tail", "/var/log/jenkins/jenkins.log"]
