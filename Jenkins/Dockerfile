@@ -13,4 +13,5 @@ RUN apt-get install openjdk-11-jdk -y
 RUN apt-get install jenkins -y
 RUN service jenkins start
 #keep docker container from exiting
+CMD [ "cat","/var/lib/jenkins/secrets/initialAdminPassword" ]
 ENTRYPOINT ["tail", "-f", "/var/log/jenkins/jenkins.log"]
