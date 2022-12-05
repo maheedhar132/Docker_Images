@@ -11,3 +11,4 @@ RUN apt update -y && \
     apt upgrade -y
 RUN apt-get install openjdk-11-jdk -y
 RUN apt-get install jenkins -y
+RUN service jenkins start
