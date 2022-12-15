@@ -1,5 +1,3 @@
-FROM jenkins:2.60.3
+FROM ubuntu
 RUN apt-get update -y && \
-    apt-get install maven -y \
-    apt-get install gradle -y \
-    apt-get install npm -y 
+    apt-get upgrade -y
