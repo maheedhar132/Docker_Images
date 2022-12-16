@@ -1,0 +1,1 @@
+FROM atlassian/bitbucket-server:8.3.1-ubuntu-jdk11
