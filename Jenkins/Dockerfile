@@ -9,5 +9,5 @@ RUN wget -O /etc/yum.repos.d/jenkins.repo \
     dnf upgrade -y && \
     dnf install jenkins -y
 EXPOSE 8080
-CMD systemctl start jenkins
+CMD systemctl enable jenkins
     
