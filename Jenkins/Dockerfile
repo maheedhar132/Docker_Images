@@ -1,6 +1,5 @@
-FROM amazonlinux:latest
-RUN amazon-linux-extras install java-openjdk11 -y && \
-    yum install wget -y && \
+FROM openjdk:21-oraclelinux8
+RUN yum install wget -y && \
     mkdir /jenkins
 WORKDIR /jenkins
 RUN wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo && \
