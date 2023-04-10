@@ -3,11 +3,7 @@ RUN microdnf install yum
 RUN yum install wget -y && \
     mkdir /jenkins
 WORKDIR /jenkins
-RUN wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/redhat-stable/jenkins.repo && \
-    rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key && \
-    dnf upgrade -y && \
-    dnf install jenkins -y
+RUN wget https://get.jenkins.io/war/2.399/jenkins.war
 EXPOSE 8080
-CMD systemctl enable jenkins
+CMD java -jar jenkins.war
     
