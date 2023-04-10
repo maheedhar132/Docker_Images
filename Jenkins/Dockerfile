@@ -8,5 +8,6 @@ RUN wget -O /etc/yum.repos.d/jenkins.repo \
     rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key && \
     dnf upgrade -y && \
     dnf install jenkins -y
+EXPOSE 8080
 CMD systemctl start jenkins
     
