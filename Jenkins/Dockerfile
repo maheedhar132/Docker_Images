@@ -1,4 +1,4 @@
-FROM linux
+FROM debian
 RUN sudo yum install java-11-openjdk-devel -y \
     yum install wget -y \
     mkdir /jenkins
