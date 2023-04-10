@@ -1,4 +1,4 @@
-FROM openjdk:21-oraclelinux8
+FROM openjdk:11
 RUN microdnf install yum
 RUN yum install wget -y && \
     mkdir /jenkins
