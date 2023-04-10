@@ -1,5 +1,5 @@
 FROM amazonlinux:latest
-RUN yum install java-11-openjdk-devel -y && \
+RUN amazon-linux-extras install java-openjdk11 -y && \
     yum install wget -y && \
     mkdir /jenkins
 WORKDIR /jenkins
