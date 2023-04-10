@@ -1,5 +1,4 @@
 FROM openjdk:11
-RUN microdnf install yum
 RUN yum install wget -y && \
     mkdir /jenkins
 WORKDIR /jenkins
