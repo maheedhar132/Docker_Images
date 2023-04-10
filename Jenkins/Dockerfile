@@ -1,4 +1,5 @@
 FROM openjdk:21-oraclelinux8
+RUN microdnf install yum
 RUN yum install wget -y && \
     mkdir /jenkins
 WORKDIR /jenkins
