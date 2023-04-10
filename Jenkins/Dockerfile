@@ -4,7 +4,7 @@ RUN yum install wget -y && \
     mkdir /jenkins
 RUN yum install epel-release -y && \
     yum install npm -y && \
-    yum install maven
+    yum install maven -y
 WORKDIR /jenkins
 RUN wget https://get.jenkins.io/war/2.399/jenkins.war
 EXPOSE 8080
